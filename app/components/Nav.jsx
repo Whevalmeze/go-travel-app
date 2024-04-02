@@ -15,31 +15,31 @@ export default function Nav() {
                     <input type="text" value={searchtext} onChange={(e) => setSearchText(e.target.value)} className="bg-[#F0F2F5] pl-12 py-2 rounded h-full" placeholder="Search" name="search" id="" />
                 </div>
             </div>
-            <div className="flex gap-5 items-center text-[#647995]">
+            <div className="hidden lg:flex gap-5 items-center text-[14px] xl:text-base text-[#647995]">
                 <ActiveLink href="/" ><div className="flex gap-1 items-center justify-center flex-col ">
                     <Image src="/House.svg" width={24} height={24} alt="" />
-                    <p>Home</p>
+                    <p className="hidden lg:block">Home</p>
                 </div></ActiveLink>
                 <div className="flex gap-1 items-center justify-center flex-col ">
                     <Image src="/ChartPieSlice.svg" width={24} height={24} alt="" />
-                    <p>Dashboard</p>
+                    <p className="hiddden lg:block">Dashboard</p>
                 </div>
                 <div className="flex gap-1 items-center justify-center flex-col ">
                     <Image src="/Wallet.svg" width={24} height={24} alt="" />
-                    <p>Wallet</p>
+                    <p className="hiddden lg:block">Wallet</p>
                 </div>
                 <ActiveLink href="/plan-trip"><div className="flex gap-1 items-center justify-center flex-col ">
                     <Image src="/ListChecks.svg" width={24} height={24} alt="" />
-                    <p>Plan a trip</p>
+                    <p className="hiddden lg:block">Plan a trip</p>
                 </div></ActiveLink>
                 <div className="flex gap-1 items-center justify-center flex-col ">
                     <Image src="/HandCoins.svg" width={24} height={24} alt="" />
-                    <p>Commision for life</p>
+                    <p className="hiddden lg:block">Commision for life</p>
                 </div>
                 <div className="w-[1px] bg-[#98A2B3] h-[40px] py-3">
                     
                 </div>
-                <button className="bg-primary-blue px-5 py-2 h-fit rounded text-white">Subscribe</button>
+                <button className="bg-primary-blue hidden px-5 py-2 h-fit rounded text-white">Subscribe</button>
                 <div className="flex gap-1 items-center justify-center flex-col ">
                     <Image src="/Bell.svg" width={24} height={24} alt="" />
                     <p>Notification</p>
