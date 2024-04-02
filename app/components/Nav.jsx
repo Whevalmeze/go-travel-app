@@ -5,31 +5,31 @@ export default function Nav() {
     <nav className="flex justify-center w-full h-[10%] px-3 py-2 tracking-[-1px]">
         <div className="flex w-full justify-between">
             <div className="flex items-center justify-center gap-3">
-                <div className="bg-primary-blue items-center justify-center rounded p-2"><img src="/go-icon.png" width="auto" height="30px" alt="" /></div>
+                <div className="bg-primary-blue items-center justify-center rounded p-2"><Image width={24} height={24} src="/go-icon.png" alt="" /></div>
                 <div className="relative">
-                    <img src="/search-icon.svg" className="absolute left-4 top-[25%]" width="auto" height="auto" alt="" />
+                    <Image src="/search-icon.svg" className="absolute left-4 top-[25%]" width={24} height={24} alt="" />
                     <input type="text" className="bg-[#F0F2F5] pl-12 py-2 rounded h-full" placeholder="Search" name="search" id="" />
                 </div>
             </div>
             <div className="flex gap-5 items-center text-[#647995]">
                 <div className="flex gap-1 items-center justify-center flex-col ">
-                    <img src="/House.svg" alt="" />
+                    <Image src="/House.svg" width={24} height={24} alt="" />
                     <p>Home</p>
                 </div>
                 <div className="flex gap-1 items-center justify-center flex-col ">
-                    <img src="/ChartPieSlice.svg" alt="" />
+                    <Image src="/ChartPieSlice.svg" width={24} height={24} alt="" />
                     <p>Dashboard</p>
                 </div>
                 <div className="flex gap-1 items-center justify-center flex-col ">
-                    <img src="/Wallet.svg" alt="" />
+                    <Image src="/Wallet.svg" width={24} height={24} alt="" />
                     <p>Wallet</p>
                 </div>
                 <div className="flex gap-1 items-center justify-center flex-col ">
-                    <img src="/ListChecks.svg" alt="" />
+                    <Image src="/ListChecks.svg" width={24} height={24} alt="" />
                     <p>Plan a trip</p>
                 </div>
                 <div className="flex gap-1 items-center justify-center flex-col ">
-                    <img src="/HandCoins.svg" alt="" />
+                    <Image src="/HandCoins.svg" width={24} height={24} alt="" />
                     <p>Commision for life</p>
                 </div>
                 <div className="w-[1px] bg-[#98A2B3] h-[40px] py-3">
@@ -37,20 +37,20 @@ export default function Nav() {
                 </div>
                 <button className="bg-primary-blue px-5 py-2 h-fit rounded text-white">Subscribe</button>
                 <div className="flex gap-1 items-center justify-center flex-col ">
-                    <img src="/Bell.svg" alt="" />
+                    <Image src="/Bell.svg" width={24} height={24} alt="" />
                     <p>Notification</p>
                 </div>
                 <div className="flex gap-1 items-center justify-center flex-col ">
-                    <img src="/Basket.svg" alt="" />
+                    <Image src="/Basket.svg" width={24} height={24} alt="" />
                     <p>Carts</p>
                 </div>
                 <div className="flex gap-1 items-center justify-center flex-col ">
-                    <img src="/PlusSquare.svg" alt="" />
+                    <Image src="/PlusSquare.svg" width={24} height={24} alt="" />
                     <p>Create</p>
                 </div>
                 <div className="flex gap-1 items-center justify-center flex-row">
-                    <img src="/profile.svg" alt="" />
-                    <img src="/CaretDown.svg" alt="" />
+                    <Image src="/profile.svg" width={52} height={52} alt="" />
+                    <Image src="/CaretDown.svg" width={24} height={24} alt="" />
                 </div>
                 
             </div>

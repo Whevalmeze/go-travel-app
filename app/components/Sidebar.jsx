@@ -1,38 +1,39 @@
+import Image from "next/image"
 
 export default function Sidebar() {
   return (
     <div className="bg-white w-[20%] h-full py-8 px-6 flex flex-col gap-12 rounded-md">
         <div className="flex justify-center gap-6 pl-4 flex-col text-[#647995] tracking-[-1px]">
             <div className="flex items-center gap-2 justify-start">
-                <img src="/RoadHorizon.svg" width="auto" height="auto" alt="" />
+                <Image src="/RoadHorizon.svg" width={24} height={24} alt="" />
                 <p>Activities</p>
             </div>
             <div className="flex items-center gap-2 justify-start">
-                <img src="/Buildings.svg" width="auto" height="auto" alt="" />
+                <Image src="/Buildings.svg" width={24} height={24} alt="" />
                 <p>Hotels</p>
             </div>
             <div className="flex items-center gap-2 justify-start">
-                <img src="/AirplaneTilt.svg" width="auto" height="auto" alt="" />
+                <Image src="/AirplaneTilt.svg" width={24} height={24} alt="" />
                 <p>Flights</p>
             </div>
             <div className="flex items-center gap-2 justify-start">
-                <img src="/Student.svg" width="auto" height="auto" alt="" />
+                <Image src="/Student.svg" width={24} height={24} alt="" />
                 <p>Study</p>
             </div>
             <div className="flex items-center gap-2 justify-start">
-                <img src="/NewspaperClipping.svg" width="auto" height="auto" alt="" />
+                <Image src="/NewspaperClipping.svg" width={24} height={24} alt="" />
                 <p>Visa</p>
             </div>
             <div className="flex items-center gap-2 justify-start">
-                <img src="/SuitcaseRolling.svg" width="auto" height="auto" alt="" />
+                <Image src="/SuitcaseRolling.svg" width={24} height={24} alt="" />
                 <p>Immigration</p>
             </div>
             <div className="flex items-center gap-2 justify-start">
-                <img src="/FirstAidKit.svg" width="auto" height="auto" alt="" />
+                <Image src="/FirstAidKit.svg" width={24} height={24} alt="" />
                 <p>Medical</p>
             </div>
             <div className="flex items-center gap-2 justify-start">
-                <img src="/Package.svg" width="auto" height="auto" alt="" />
+                <Image src="/Package.svg" width={24} height={24} alt="" />
                 <p>Vacation Packages</p>
             </div>
         </div>
@@ -41,7 +42,7 @@ export default function Sidebar() {
                 Go
             </div>
             <p>Personal Account</p>
-            <img src="/CaretUpDown.svg" width="auto" height="auto" alt="" />
+            <Image src="/CaretUpDown.svg" width={24} height={24} alt="" />
         </div>
     </div>
   )
