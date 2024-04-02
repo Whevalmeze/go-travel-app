@@ -1,4 +1,5 @@
 import Image from "next/image"
+import ActiveLink from "./ActiveLink"
 
 export default function Sidebar() {
   return (
@@ -6,15 +7,15 @@ export default function Sidebar() {
         <div className="flex justify-center gap-6 pl-4 flex-col text-[#647995] tracking-[-1px]">
             <div className="flex items-center gap-2 justify-start">
                 <Image src="/RoadHorizon.svg" width={24} height={24} alt="" />
-                <p>Activities</p>
+                <ActiveLink href="/plan-trip/activities"><p>Activities</p></ActiveLink>
             </div>
             <div className="flex items-center gap-2 justify-start">
                 <Image src="/Buildings.svg" width={24} height={24} alt="" />
-                <p>Hotels</p>
+                <ActiveLink href="/plan-trip/hotels"><p>Hotels</p></ActiveLink>
             </div>
             <div className="flex items-center gap-2 justify-start">
                 <Image src="/AirplaneTilt.svg" width={24} height={24} alt="" />
-                <p>Flights</p>
+                <ActiveLink href="/plan-trip/flights"><p>Flights</p></ActiveLink>
             </div>
             <div className="flex items-center gap-2 justify-start">
                 <Image src="/Student.svg" width={24} height={24} alt="" />

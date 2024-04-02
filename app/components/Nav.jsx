@@ -1,4 +1,5 @@
 import Image from "next/image"
+import ActiveLink from "./ActiveLink"
 
 export default function Nav() {
   return (
@@ -7,15 +8,15 @@ export default function Nav() {
             <div className="flex items-center justify-center gap-3">
                 <div className="bg-primary-blue items-center justify-center rounded p-2"><Image width={24} height={24} src="/go-icon.png" alt="" /></div>
                 <div className="relative">
-                    <Image src="/search-icon.svg" className="absolute left-4 top-[25%]" width={24} height={24} alt="" />
+                    <Image src="/search-icon.svg" className="absolute left-4 top-[25%]" width={20} height={20} alt="" />
                     <input type="text" className="bg-[#F0F2F5] pl-12 py-2 rounded h-full" placeholder="Search" name="search" id="" />
                 </div>
             </div>
             <div className="flex gap-5 items-center text-[#647995]">
-                <div className="flex gap-1 items-center justify-center flex-col ">
+                <ActiveLink href="/" ><div className="flex gap-1 items-center justify-center flex-col ">
                     <Image src="/House.svg" width={24} height={24} alt="" />
                     <p>Home</p>
-                </div>
+                </div></ActiveLink>
                 <div className="flex gap-1 items-center justify-center flex-col ">
                     <Image src="/ChartPieSlice.svg" width={24} height={24} alt="" />
                     <p>Dashboard</p>
@@ -24,10 +25,10 @@ export default function Nav() {
                     <Image src="/Wallet.svg" width={24} height={24} alt="" />
                     <p>Wallet</p>
                 </div>
-                <div className="flex gap-1 items-center justify-center flex-col ">
+                <ActiveLink href="/plan-trip"><div className="flex gap-1 items-center justify-center flex-col ">
                     <Image src="/ListChecks.svg" width={24} height={24} alt="" />
                     <p>Plan a trip</p>
-                </div>
+                </div></ActiveLink>
                 <div className="flex gap-1 items-center justify-center flex-col ">
                     <Image src="/HandCoins.svg" width={24} height={24} alt="" />
                     <p>Commision for life</p>
