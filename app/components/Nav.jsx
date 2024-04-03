@@ -3,7 +3,7 @@ import Image from "next/image"
 import { useState } from "react"
 import ActiveLink from "./ActiveLink"
 
-export default function Nav() {
+export default function Nav(getUserInput) {
     const [searchtext, setSearchText] = useState("")
   return (
     <nav className="flex justify-center w-full h-[10%] px-3 py-2 tracking-[-1px]">
@@ -12,7 +12,7 @@ export default function Nav() {
                 <div className="bg-primary-blue items-center justify-center rounded p-2"><Image width={24} height={24} src="/go-icon.png" alt="" /></div>
                 <div className="relative">
                     <Image src="/search-icon.svg" className="absolute left-4 top-[25%]" width={20} height={20} alt="" />
-                    <input type="text" value={searchtext} onChange={(e) => setSearchText(e.target.value)} className="bg-[#F0F2F5] pl-12 py-2 rounded h-full" placeholder="Search" name="search" id="" />
+                    <input type="text" value={searchtext} onEnter onChange={(e) => setSearchText(e.target.value)} className="bg-[#F0F2F5] pl-12 py-2 rounded h-full" placeholder="Search" name="search" id="" />
                 </div>
             </div>
             <div className="hidden lg:flex gap-5 items-center text-[14px] xl:text-base text-[#647995]">

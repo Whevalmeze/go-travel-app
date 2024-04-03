@@ -19,16 +19,16 @@ export default function HotelPage() {
   };
   useEffect(
       () => {
-          // try {
-          //     fetch(url, options)
-          //     .then((response) => response.json())
-          //     .then(result => {
-          //       console.log(result.data.hotels)
-          //       setHotels(result.data.hotels)
-          //     })
-          // } catch (error) {
-          //     console.error("I am the error",error);
-          // }
+          try {
+              fetch(url, options)
+              .then((response) => response.json())
+              .then(result => {
+                console.log(result.data.hotels)
+                setHotels(result.data.hotels)
+              })
+          } catch (error) {
+              console.error("I am the error",error);
+          }
 
       }, [])
   return (

@@ -15,16 +15,16 @@ export default function Activities() {
   };
   useEffect(
       () => {
-          // try {
-          //     fetch(url, options)
-          //     .then((response) => response.json())
-          //     .then(result => {
-          //       console.log(result.data.products)
-          //       setActivities(result.data.products)
-          //     })
-          // } catch (error) {
-          //     console.error("I am the error",error);
-          // }
+          try {
+              fetch(url, options)
+              .then((response) => response.json())
+              .then(result => {
+                console.log(result.data.products)
+                setActivities(result.data.products)
+              })
+          } catch (error) {
+              console.error("I am the error",error);
+          }
 
       }, [])
   return (
