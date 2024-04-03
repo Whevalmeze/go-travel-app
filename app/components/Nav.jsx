@@ -6,7 +6,7 @@ import ActiveLink from "./ActiveLink"
 export default function Nav(getUserInput) {
     const [searchtext, setSearchText] = useState("")
   return (
-    <nav className="flex justify-center w-full h-[10%] px-3 py-2 tracking-[-1px]">
+    <nav className="flex justify-center w-full h-[10%] bg-white px-3 py-2 tracking-[-1px]">
         <div className="flex w-full justify-between">
             <div className="flex items-center justify-center gap-3">
                 <div className="bg-primary-blue items-center justify-center rounded p-2"><Image width={24} height={24} src="/go-icon.png" alt="" /></div>

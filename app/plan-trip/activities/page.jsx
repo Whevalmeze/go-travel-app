@@ -28,12 +28,12 @@ export default function Activities() {
 
       }, [])
   return (
-    <div className='bg-[#0054E4] text-white w-full overflow-hidden flex flex-col gap-4 rounded-md px-6 py-4'>
+    <div className='bg-[#0054E4] text-white w-full flex flex-col gap-4 rounded-md px-6 py-4'>
       <div className='flex justify-between items-center'>
         <div className='items-center justify-center flex gap-2'><Image src="/RoadHorizonWhite.svg" width={20} height={20} alt=""/> Activities </div>
-        <button className='px-7 py-2 rounded bg-white text-[#344054]'>Add <span className='hidden sm:block'>Activities</span></button>
+        <button className='px-7 py-2 rounded bg-white flex items-center gap-1 text-[#344054]'>Add <span className='hidden sm:block'>Activities</span></button>
       </div>
-      <div className='flex w-full flex-col  overflow-y-scroll max-h-full scroll-m-2 '>
+      <div className='flex w-full flex-col max-h-full scroll-m-2 '>
         {
           activities ? 
           <div className='flex flex-col gap-2'>

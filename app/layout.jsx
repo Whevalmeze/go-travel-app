@@ -13,12 +13,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <div className="h-screen w-full">
           <Nav />
-          <section className="bg-[#F0F2F5] gap-4 p-4 w-full h-[90%] flex">
+          <section className="bg-[#F0F2F5] gap-4 p-4 w-full min-h-full flex">
             {children}
           </section>
-        </div>
       </body>
     </html>
   );
