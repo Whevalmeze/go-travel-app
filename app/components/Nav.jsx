@@ -6,11 +6,11 @@ import ActiveLink from "./ActiveLink"
 export default function Nav(getUserInput) {
     const [searchtext, setSearchText] = useState("")
   return (
-    <nav className="flex justify-center w-full h-[10%] bg-white px-3 py-2 tracking-[-1px]">
+    <nav className="flex justify-center w-full h-[10%] bg-white px-3 py-3 tracking-[-1px]">
         <div className="flex w-full justify-between">
             <div className="flex items-center justify-center gap-3">
                 <div className="bg-primary-blue items-center justify-center rounded p-2"><Image width={24} height={24} src="/go-icon.png" alt="" /></div>
-                <div className="relative">
+                <div className="relative hidden md:block">
                     <Image src="/search-icon.svg" className="absolute left-4 top-[25%]" width={20} height={20} alt="" />
                     <input type="text" value={searchtext} onEnter onChange={(e) => setSearchText(e.target.value)} className="bg-[#F0F2F5] pl-12 py-2 rounded h-full" placeholder="Search" name="search" id="" />
                 </div>
