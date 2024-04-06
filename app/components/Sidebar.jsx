@@ -3,7 +3,7 @@ import ActiveLink from "./ActiveLink"
 
 export default function Sidebar() {
   return (
-    <div className="bg-white sticky top-[20px] lg:min-w-[200px] h-fit py-4 lg:py-8 px-2 lg:px-6 lg:flex flex-col gap-12 rounded-md">
+    <div className="bg-white sticky hidden md:flex top-[20px] lg:min-w-[200px] h-fit py-4 lg:py-8 px-2 lg:px-6 lg:flex flex-col gap-12 rounded-md">
         <div className="flex items-center lg:items-start justify-center gap-6 lg:pl-4 flex-col text-[#647995] tracking-[-1px]">
             <div className="flex items-center gap-0 lg:gap-2 justify-start">
                 <Image src="/RoadHorizon.svg" width={24} height={24} alt="" />
