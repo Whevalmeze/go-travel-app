@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function Trip() {
+export default function Trip({ params }) {
   return (
     <section className="bg-white h-full flex flex-col gap-3 rounded p-3">
         <div className="flex flex-col gap-3 ">
@@ -11,7 +11,7 @@ export default function Trip() {
           </div>
           <div className="flex flex-col md:flex-row items-start gap-3 md:gap-0 md:items-center justify-between w-full">
             <div className="flex tracking-[-1px] flex-col gap-1">
-              <div className="text-[#7A4504] bg-[rgb(254,244,230)] w-fit p-2 gap-2 font-medium flex items-center justify-center">
+              <div className="text-[#7A4504] bg-[rgb(254,244,230)] w-fit text-sm p-2 gap-2 font-medium flex items-center justify-center">
                 <div className="flex items-center gap-1 justify-center">
                   <Image src="/CalendarBlankStroke.svg" width={16} height={16} alt="" />
                   <span>21 March 2024</span>
@@ -21,7 +21,7 @@ export default function Trip() {
                   <span>21 April 2024</span>
                 </div>
               </div>
-                <h2 className="text-black text-2xl font-bold tracking-[-1%]">Bahamas Family Trip</h2>
+                <h2 className="text-black text-2xl font-bold tracking-[-1%]">{params.trip}</h2>
                 <span className="flex items-center font-medium gap-2">
                   <p>New York, United States Of America</p> <div className="h-[18px] bg-[#D0D5DD] w-[2px]"></div> <p>Solo Trip</p>
                 </span>
