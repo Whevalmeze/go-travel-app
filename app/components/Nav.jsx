@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image"
 import { useState } from "react"
+import Link from "next/link"
 import ActiveLink from "./ActiveLink"
 
 export default function Nav(getUserInput) {
@@ -11,7 +12,9 @@ export default function Nav(getUserInput) {
             <div className="flex items-center justify-center gap-3">
                 <div className="bg-primary-blue items-center justify-center rounded p-2"><Image width={24} height={24} src="/go-icon.png" alt="" /></div>
                 <div className="relative hidden md:block">
-                    <Image src="/search-icon.svg" className="absolute left-4 top-[25%]" width={20} height={20} alt="" />
+                    <Link href="/">
+                        <Image src="/search-icon.svg" className="absolute left-4 top-[25%]" width={20} height={20} alt="" />
+                    </Link>
                     <input type="text" value={searchtext} onEnter onChange={(e) => setSearchText(e.target.value)} className="bg-[#F0F2F5] pl-12 py-2 rounded h-full" placeholder="Search" name="search" id="" />
                 </div>
             </div>
