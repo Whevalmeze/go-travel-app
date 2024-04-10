@@ -17,26 +17,22 @@ export default function TripList({showForm, setShowForm, setSlide, trips, setTri
 
   return (
     <>
-        { trips ? 
+        { 
             ( 
-               (!showForm  && trips.length !== 0) &&
-                <div className="w-full h-full p-3 rounded flex flex-col gap-5 tracking-normal bg-white">
-                    <div className="flex justify-between">
+               (!showForm) &&
+                <div className="w-full h-full rounded-md flex flex-col gap-5 tracking-normal bg-white">
+                    <div className="flex p-6 justify-between">
                         <h1 className="font-bold">All trips</h1>
                         <button onClick={() => {setShowForm(prev => !prev); setSlide(1)}}>Add Trip</button>
                     </div>
                 { trips &&
                     trips.map((trip) => (
-                        <TripItem trip={trip} />
+                        <TripItem key={trip.id} setTrips={setTrips} trip={trip} />
                         )
                     )
                 }
                 </div> 
-            )
-            :
-            <div>
-                COming soon
-            </div> 
+            )        
         } 
      </>
   );

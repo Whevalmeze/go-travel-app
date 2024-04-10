@@ -1,4 +1,4 @@
-import { getFirestore, collection, getDocs, addDoc } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, addDoc, doc, deleteDoc, getDoc } from 'firebase/firestore';
 import app from '@/firebaseConfig';
 
 const db = getFirestore(app);
@@ -11,6 +11,14 @@ export const addTripToFirebase = async (tripData) => {
         console.log("Added trip to collections", newTripRef.id)
     } catch (error) {
         console.error("Failed to add trip:", error)
+    }
+}
+
+export const removeTripFromFirebase = async (id) => {
+    try {
+        await deleteDoc(doc(db, "trips", id));
+    } catch (error) {
+        console.error("Failed to delete trip:", error)
     }
 }
 
@@ -30,5 +38,12 @@ const fetchTrips = async () => {
     }
 };
 
+export const fetchTrip = async (id) => {
+    try {
+        await getDoc(doc(db, "trips", id));
+    } catch (error) {
+        console.error(error);
+    }
+}
 
 export default fetchTrips;

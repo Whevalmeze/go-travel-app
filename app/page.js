@@ -70,9 +70,9 @@ export default function Home() {
         {destinations.map(({ country, image_url, hotels, dest_id, region, name }) => (
           <div key={dest_id} className="w-full flex gap-2 max-h-[274px] rounded text-[#676E7E] bg-white p-2">
             <div className="relative text-[#676E7E]">
-              <img src="/CaretCircleRight.svg" className="absolute top-[45%] right-[5%]" width={24} height={24} alt="" />
-              <img src={image_url} className="rounded" height={224} width={232} alt="" />
-              <img src="/CaretCircleLeft.svg" className="absolute top-[45%] left-[5%]" width={24} height={24} alt="" />
+              <Image src="/CaretCircleRight.svg" className="absolute top-[45%] right-[5%]" width={24} height={24} alt="" />
+              <Image src={image_url} className="rounded" height={224} width={232} alt="" />
+              <Image src="/CaretCircleLeft.svg" className="absolute top-[45%] left-[5%]" width={24} height={24} alt="" />
             </div>
             <div className="flex gap-3 flex-col w-full px-3 py-1">
               <p className="text-black"><strong>{name}</strong></p>

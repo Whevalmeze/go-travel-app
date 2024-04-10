@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { addTripToFirebase } from "../utils/firebaseUtils";
+import fetchTrips, { addTripToFirebase } from "../utils/firebaseUtils";
 
 export default function TripForm({setSlide, slide, trips, setTrips, setShowForm}) {
     const showCardStyle = "flex w-full m-12 gap-6 flex-col";
@@ -38,9 +38,9 @@ export default function TripForm({setSlide, slide, trips, setTrips, setShowForm}
         checkOutDate: checkOutDate,
         tripType: tripType,
         destination: destination,
-        key: tripTitle + checkInDate + 1,
         };
         addTripToFirebase(newTrip)
+        fetchTrips().then(tripData => setTrips(tripData)).catch(error => {console.error("Error fetching trips:", error)});
         setTripTitle("")
         setCheckInDate("")
         setCheckOutDate("")
@@ -49,7 +49,7 @@ export default function TripForm({setSlide, slide, trips, setTrips, setShowForm}
     };
 
   return (
-    <form className="flex bg-white border max-w-[500px] lg:w-[500px] rounded-md gap-1">
+    <form onSubmit={(e) => handleSubmit(e)} className="flex bg-white border max-w-[500px] lg:w-[500px] rounded-md gap-1">
                 <div className={slide ==1 ? showCardStyle : hideCardStyle}>
                   <h1 className="text-4xl text-black font-bold">Plan a New Trip</h1>
                   <div className="relative w-full min-w-[200px]">

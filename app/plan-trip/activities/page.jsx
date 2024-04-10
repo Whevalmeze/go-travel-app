@@ -42,14 +42,14 @@ export default function Activities() {
                       ({id, name, cityName, representativePrice, primaryPhoto, reviewsStats}) => (
                         <div key={id} className='w-full flex gap-2 max-h-[274px] rounded text-[#676E7E] bg-white p-2'>
                             <div className='relative text-[#676E7E]'>
-                              <img src="/CaretCircleRight.svg" className='absolute top-[45%] right-[5%]' width={24} height={24} alt="" />
-                              <img src={primaryPhoto.small} className='rounded' height={224} width={232} alt="" />
-                              <img src="/CaretCircleLeft.svg" className='absolute top-[45%] left-[5%]' width={24} height={24} alt="" />
+                              <Image src="/CaretCircleRight.svg" className='absolute top-[45%] right-[5%]' width={24} height={24} alt="" />
+                              <Image src={primaryPhoto.small} className='rounded' height={224} width={232} alt="" />
+                              <Image src="/CaretCircleLeft.svg" className='absolute top-[45%] left-[5%]' width={24} height={24} alt="" />
                             </div>
                             <div className='flex gap-3 flex-col'>
                               <p className='text-black'><strong>{name}</strong></p>
                               <p className='text-black'>{cityName}</p>
-                              {/* <p className='flex items-center'><img src="/Star.svg" width={16} height={16} alt="" /> {reviewsStats.allReviewsCount} ( {reviewsStats.percentage} )</p> */}
+                              {/* <p className='flex items-center'><Image src="/Star.svg" width={16} height={16} alt="" /> {reviewsStats.allReviewsCount} ( {reviewsStats.percentage} )</p> */}
                               <p>Currency: {representativePrice.currency}</p>
                               <div className='flex'>
                                 {/*<span className='flex'><Image src="/CalendarBlank.svg" width={15} height={15} alt="" /> <p>Check in: {property.checkinDate}</p>

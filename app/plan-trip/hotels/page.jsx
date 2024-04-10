@@ -46,13 +46,13 @@ export default function HotelPage() {
                       ({hotel_id, property}) => (
                         <div key={hotel_id} className='w-full flex gap-2 max-h-[274px] rounded text-[#676E7E] bg-white p-2'>
                             <div className='relative text-[#676E7E]'>
-                              <img src="/CaretCircleRight.svg" className='absolute top-[45%] right-[5%]' width={24} height={24} alt="" />
-                              <img src={property.photoUrls[0]} className='rounded' height={224} width={232} alt="" />
-                              <img src="/CaretCircleLeft.svg" className='absolute top-[45%] left-[5%]' width={24} height={24} alt="" />
+                              <Image src="/CaretCircleRight.svg" className='absolute top-[45%] right-[5%]' width={24} height={24} alt="" />
+                              <Image src={property.photoUrls[0]} className='rounded' height={224} width={232} alt="" />
+                              <Image src="/CaretCircleLeft.svg" className='absolute top-[45%] left-[5%]' width={24} height={24} alt="" />
                             </div>
                             <div className='flex gap-3 flex-col w-full px-3 py-1'>
                               <p className='text-black'><strong>{property.name}</strong></p>
-                              <p className='flex items-center gap-1'><img src="/Star.svg" width={16} height={16} alt="" /> {property.reviewScore} ( {property.reviewCount} )</p>
+                              <p className='flex items-center gap-1'><Image src="/Star.svg" width={16} height={16} alt="" /> {property.reviewScore} ( {property.reviewCount} )</p>
                               <p>Currency: {property.currency}</p>
                               <div className='flex justify-between w-full border-t border-b border-t-[#E4E7EC] border-b-[#E4E7EC] py-2'>
                                 <div className='flex gap-3'>Facilities: 
