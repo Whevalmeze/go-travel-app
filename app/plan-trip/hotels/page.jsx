@@ -23,7 +23,6 @@ export default function HotelPage() {
               fetch(url, options)
               .then((response) => response.json())
               .then(result => {
-                console.log(result.data.hotels)
                 setHotels(result.data.hotels)
               })
           } catch (error) {
@@ -46,9 +45,9 @@ export default function HotelPage() {
                       ({hotel_id, property}) => (
                         <div key={hotel_id} className='w-full flex gap-2 max-h-[274px] rounded text-[#676E7E] bg-white p-2'>
                             <div className='relative text-[#676E7E]'>
-                              <Image src="/CaretCircleRight.svg" className='absolute top-[45%] right-[5%]' width={24} height={24} alt="" />
-                              <Image src={property.photoUrls[0]} className='rounded' height={224} width={232} alt="" />
-                              <Image src="/CaretCircleLeft.svg" className='absolute top-[45%] left-[5%]' width={24} height={24} alt="" />
+                              <Image src="/CaretCircleRight.svg" className='absolute top-[30%] lg:top-[45%] right-[5%]' width={24} height={24} alt="" />
+                              <img src={property.photoUrls[0]} className='rounded' height={224} width={232} alt="" />
+                              <Image src="/CaretCircleLeft.svg" className='absolute top-[30%] lg:top-[45%] left-[5%]' width={24} height={24} alt="" />
                             </div>
                             <div className='flex gap-3 flex-col w-full px-3 py-1'>
                               <p className='text-black'><strong>{property.name}</strong></p>

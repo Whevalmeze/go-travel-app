@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
 export default function Trip ({trip}) {
@@ -73,16 +74,16 @@ export default function Trip ({trip}) {
             </div>
             </div>
 
-        <div className="flex flex-col item-center md:flex-row gap-1">
+        <div className="flex flex-col item-center md:flex-row gap-2">
             <div className="bg-[#000031] tracking-tight flex flex-col gap-2 max-w-[300px] text-white rounded p-5">
             <h3 className="font-bold text-lg">Activities</h3>
             <p className="mb-7">
                 Build, personalize, and optimize your itineraries with our trip
                 planner.
             </p>
-            <button className="bg-[#0D6EFD] rounded w-full px-12 py-4">
+            <Link href="/plan-trip/activities"><button className="bg-[#0D6EFD] rounded w-full px-12 py-4">
                 Add Activities
-            </button>
+            </button></Link>
             </div>
             <div className="bg-[#E7F0FF] tracking-tight flex flex-col gap-2 max-w-[300px] text-[#1D2433] rounded p-5">
             <h3 className="font-bold text-lg">Hotels</h3>
@@ -90,9 +91,9 @@ export default function Trip ({trip}) {
                 Build, personalize, and optimize your itineraries with our trip
                 planner.
             </p>
-            <button className="bg-[#0D6EFD] rounded w-full px-12 text-white py-4">
+            <Link href="/plan-trip/hotels"><button className="bg-[#0D6EFD] rounded w-full px-12 text-white py-4">
                 Add Hotels
-            </button>
+            </button></Link>
             </div>
             <div className="bg-[#0D6EFD] tracking-tight flex flex-col gap-2 max-w-[300px] text-white rounded p-5">
             <h3 className="font-bold text-lg">Flights</h3>
@@ -100,9 +101,9 @@ export default function Trip ({trip}) {
                 Build, personalize, and optimize your itineraries with our trip
                 planner.
             </p>
-            <button className="bg-white rounded w-full px-12 py-4 text-[#0D6EFD]">
+            <Link href="/plan-trip/activities"><button className="bg-white rounded w-full px-12 py-4 text-[#0D6EFD]">
                 Add Flights
-            </button>
+            </button></Link>
             </div>
         </div> 
       </div>

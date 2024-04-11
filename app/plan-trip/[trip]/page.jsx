@@ -39,7 +39,7 @@ export default function TripPage({ params }) {
   return (
     <section className="bg-white h-full flex flex-col gap-3 rounded p-3">
       {isLoading ? (
-        <div>Loading ...</div>
+        <div className="min-w-full min-h-full">Loading ...</div>
       ) : trip ? (
         <Trip trip={{...trip, checkInDate, checkOutDate}}  /> // Pass trip data along with month
       ) : (

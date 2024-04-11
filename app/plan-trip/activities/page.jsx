@@ -19,7 +19,6 @@ export default function Activities() {
               fetch(url, options)
               .then((response) => response.json())
               .then(result => {
-                console.log(result.data.products)
                 setActivities(result.data.products)
               })
           } catch (error) {
@@ -42,9 +41,9 @@ export default function Activities() {
                       ({id, name, cityName, representativePrice, primaryPhoto, reviewsStats}) => (
                         <div key={id} className='w-full flex gap-2 max-h-[274px] rounded text-[#676E7E] bg-white p-2'>
                             <div className='relative text-[#676E7E]'>
-                              <Image src="/CaretCircleRight.svg" className='absolute top-[45%] right-[5%]' width={24} height={24} alt="" />
-                              <Image src={primaryPhoto.small} className='rounded' height={224} width={232} alt="" />
-                              <Image src="/CaretCircleLeft.svg" className='absolute top-[45%] left-[5%]' width={24} height={24} alt="" />
+                              <Image src="/CaretCircleRight.svg" className='absolute top-[30%] lg:top-[45%] right-[5%]' width={24} height={24} alt="" />
+                              <img src={primaryPhoto.small} className='rounded' height={224} width={232} alt="" />
+                              <Image src="/CaretCircleLeft.svg" className='absolute top-[30%] lg:top-[45%] left-[5%]' width={24} height={24} alt="" />
                             </div>
                             <div className='flex gap-3 flex-col'>
                               <p className='text-black'><strong>{name}</strong></p>
