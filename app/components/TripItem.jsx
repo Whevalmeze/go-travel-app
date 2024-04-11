@@ -25,11 +25,11 @@ export default function TripItem({ trip, setTrips }) {
   return (
     <div className={`flex justify-between pl-6 `}>
       <div>
-      <Link href={`/trips/${trip.id}`}><h2>{trip.title}</h2></Link>
+      <Link href={`/plan-trip/${trip.id}`}><h2>{trip.title}</h2></Link>
         <p>{trip.tripType}</p>
       </div>
-      <div className="min-h-full h-[100px] cursor-pointer w-[30px] flex flex-col items-center justify-center hover:bg-[#FBEAE9]">
-        <Image src="/cancel.svg" alt="" width={24} height={24} onClick={handleDelete} />
+      <div onClick={handleDelete} className="min-h-full h-[100px] cursor-pointer w-[30px] flex flex-col items-center justify-center hover:bg-[#FBEAE9]">
+        <Image src="/cancel.svg" alt="" width={24} height={24} />
       </div>
     </div>
   );

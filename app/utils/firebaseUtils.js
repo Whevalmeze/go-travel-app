@@ -40,9 +40,18 @@ const fetchTrips = async () => {
 
 export const fetchTrip = async (id) => {
     try {
-        await getDoc(doc(db, "trips", id));
+        const tripSnapshot = await getDoc(doc(db, "trips", id))
+        if(tripSnapshot.exists()) {
+            const tripData = tripSnapshot.data()
+            console.log("Fetched trip data:", tripData)
+            return tripData;
+        }  else {
+            console.error('Trip document does not exist')
+            return null
+        }
     } catch (error) {
-        console.error(error);
+        console.error("Error fetching trips: ",error);
+        throw error;
     }
 }
 
