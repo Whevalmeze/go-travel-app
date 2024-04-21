@@ -3,13 +3,9 @@ import {useState, useEffect} from 'react'
 import Image from 'next/image'
 
 export default function HotelPage() {
-  const [userInput, setUserInput] = useState("")
-  const getUserInput = (input) => {
-    setUserInput(input)
-  }
-  const [hotels, setHotels] = useState(null)
+  const [hotels, setHotels] = useState([])
   const API_KEY = process.env.NEXT_PUBLIC_API_KEY
-  const url = 'https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels?dest_id=-2092174&search_type=city&arrival_date=2024-04-03&departure_date=2024-04-04&adults=1&children_age=0%2C17&room_qty=1&page_number=1&languagecode=en-us&currency_code=AED';
+  const url = `https://booking-com15.p.rapidapi.com/api/v1/hotels/searchHotels?dest_id=-2092174&search_type=CITY&arrival_date=2024-04-22&departure_date=2024-04-29&adults=1&children_age=0%2C17&room_qty=1&page_number=1&languagecode=en-us&currency_code=AED`;
   const options = {
       method: 'GET',
       headers: {
@@ -19,16 +15,16 @@ export default function HotelPage() {
   };
   useEffect(
       () => {
-          try {
-              fetch(url, options)
-              .then((response) => response.json())
-              .then(result => {
-                setHotels(result.data.hotels)
-              })
-          } catch (error) {
-              console.error("I am the error",error);
+          const fetchHotels = async () => {
+            try {
+              const response = await fetch(url, options)
+              const results = await response.json()
+              setHotels(results.data.hotels)
+            } catch (error) {
+                console.error("I am the error",error);
+            }
           }
-
+          fetchHotels()
       }, [])
   return (
     <div className='bg-[#344054] text-white w-full overflow-hidden flex flex-col gap-4 rounded-md px-6 py-4'>
@@ -36,9 +32,9 @@ export default function HotelPage() {
         <div className='items-center justify-center flex gap-2'><Image src="/Warehouse.svg" width={20} height={20} alt=""/>  Hotels </div>
         <button className='px-7 py-2 rounded bg-white text-[#344054]'>Add Hotels</button>
       </div>
-      <div className='flex w-full flex-col overflow-y-scroll max-h-full scroll-m-2 '>
+      <div className='flex w-full flex-col max-h-full scroll-m-2 '>
         {
-          hotels ? 
+          hotels.length !== 0 ? 
           <div className='flex flex-col gap-2'>
                 {
                   hotels.map(

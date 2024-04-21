@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Flights() {
+export default function page() {
   return (
-    <div>Flights</div>
+    <div>Flight</div>
   )
 }

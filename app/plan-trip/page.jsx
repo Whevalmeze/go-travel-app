@@ -5,6 +5,9 @@
     
 
     export default function PlanTrip() {
+      const [checkInDate, setCheckInDate] = useState("")
+      const [checkOutDate, setCheckOutDate] = useState("")
+      const [destId,setDestId] = useState("")
       const [searchQuery, setSearchQuery] = useState("");
       const [trips, setTrips] = useState([]);
       const [showForm, setShowForm] = useState(false);

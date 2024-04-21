@@ -28,8 +28,8 @@ export default function TripItem({ trip, setTrips }) {
       <Link href={`/plan-trip/${trip.id}`}><h2 className="text-2xl hover:text-primary-blue font-semibold">{trip.title}</h2></Link>
         <span>{trip.tripType} Trip in {trip.destination}</span>
       </div>
-      <div onClick={handleDelete} className=" cursor-pointer w-[30px] mr-7 flex flex-col items-center justify-center hover:bg-[#FBEAE9]">
-        <Image src="/cancel.svg" alt="" width={24} height={24} />
+      <div className="cursor-pointer w-[30px] mr-7 flex flex-col items-center justify-center">
+        <Image onClick={handleDelete} src="/cancel.svg" alt="" width={24} height={24} />
       </div>
     </div>
   );

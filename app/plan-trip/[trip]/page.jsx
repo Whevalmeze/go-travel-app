@@ -1,6 +1,5 @@
 "use client"
 import { fetchTrip } from "@/app/utils/firebaseUtils";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import Trip from "@/app/components/Trip";
 
@@ -27,6 +26,7 @@ export default function TripPage({ params }) {
         setCheckOutDate(checkOutDate)
         setTrip(tripData);
         setIsLoading(false);
+        console.log(checkInDate)
       } catch (error) {
         console.error("Error fetching trip:", error);
         setIsLoading(false);
