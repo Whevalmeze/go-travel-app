@@ -1,7 +1,7 @@
     "use client"
     import { useState } from "react";
-    import TripForm from "../components/TripForm";
-    import TripList from "../components/TripList";
+    import TripForm from "../../components/TripForm";
+    import TripList from "../../components/TripList";
     
 
     export default function PlanTrip() {

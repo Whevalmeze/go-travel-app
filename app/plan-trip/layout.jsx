@@ -1,5 +1,5 @@
-import Nav from "../components/Nav";
-import Sidebar from "../components/Sidebar";
+import Nav from "../../components/Nav";
+import Sidebar from "../../components/Sidebar";
 export default function Layout({ children }) {
   return (
         <div className="w-full h-full gap-4 flex">

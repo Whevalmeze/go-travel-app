@@ -1,6 +1,6 @@
 "use client"
 import {useState, useEffect} from 'react'
-import Activities from '@/app/components/Activities'
+import Activities from '@/components/Activities'
 
 export default function Page() {
   const [activities, setActivities] = useState([])

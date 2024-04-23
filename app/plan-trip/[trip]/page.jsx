@@ -1,7 +1,7 @@
 "use client"
-import { fetchTrip } from "@/app/utils/firebaseUtils";
+import { fetchTrip } from "@/utils/firebaseUtils";
 import { useEffect, useState } from "react";
-import Trip from "@/app/components/Trip";
+import Trip from "@/components/Trip";
 
 export default function TripPage({ params }) {
   const [trip, setTrip] = useState([]);
