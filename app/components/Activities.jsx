@@ -10,7 +10,7 @@ export default function Activities({activities}) {
         <button className='px-7 py-2 rounded bg-white text-[#344054]'>Add Activities</button>
       </div>
       <div className='flex w-full gap-5 flex-col max-h-full scroll-m-2 '>
-          { activities.length !== 0  ?
+          { activities && activities.length !== 0  ?
                       activities.map(({id, name, cityName, representativePrice, primaryPhoto, reviewsStats}) => (
                           <Activity key={id} id={id} name={name} cityName={cityName} representativePrice={representativePrice} primaryPhoto={primaryPhoto} reviewsStats={reviewsStats} />
                       ))
