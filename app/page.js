@@ -1,4 +1,6 @@
 "use client"
+import { DefaultNav } from "@/components/DefaultNav";
+import HomePageForm from "@/components/HomePageForm";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -10,15 +12,7 @@ export default function Home() {
   const [checkInDate, setCheckInDate] = useState(date);
   const [checkOutDate, setCheckOutDate] = useState("");
   const [destinations, setDestinations] = useState(null);
-  function handleSubmit (e) {
-    e.preventDefault()
-    setSearchQuery(location)
-    localStorage.setItem("userpref", JSON.stringify({
-      "location" : location,
-      "checkindate" : checkInDate,
-      "checkoutdate" : checkOutDate,
-    }))
-  }
+
 
   useEffect(() => {
     if (location.trim() !== "") {
@@ -45,28 +39,25 @@ export default function Home() {
   }, [searchQuery]);
 
   return (
-    <main className="flex flex-col items-center tracking-tighter text-[#676E7E] p-3 w-full rounded-md">
-      <div className="w-full py-6 px-4 flex flex-col gap-4">
-      <div className="text-black">
-            <h1 className="text-5xl font-black mb-2">Explore New Boundaries</h1>
-            <h1 className="text-base font-light">Find exclusive {page}s everywhere in the world.</h1>
+    <main className="w-full">
+      <div className="w-full p-4 bg-[#003b95]">
+        <div className="flex flex-col m-auto text-white max-w-screen-lg items-center tracking-tighter p-3 w-full rounded-md">
+          <DefaultNav />
+          <div className="w-full py-6 relative flex flex-col gap-4">
+            <div className="py-6">
+                <h1 className="text-5xl font-black mb-2">The whole world awaits</h1>
+                <h1 className="text-base font-light">Find exclusive {page}s everywhere in the world.</h1>
+            </div>
+            {/* Form */}
+           <HomePageForm page={page} location={location} setSearchQuery={setSearchQuery} setCheckInDate={setCheckInDate} setCheckOutDate={setCheckOutDate} setLocation={setLocation} date={date} checkInDate={checkInDate} checkOutDate={checkOutDate} />
           </div>
-        {/* Form */}
-        <form action="GET" className="flex min-w-full rounded-md gap-1">
-          <div className="relative w-[40%] min-w-[200px]">
-            <Image src={`${page.toLowerCase() == "destination" ? "/Buildings.svg" : "/search-icon.svg" }`} className="absolute left-4 top-[25%]" width={20} height={20} alt="" />
-            <input type="search" maxLength={20} minLength={2} placeholder={`Search for a ${page}`} name="location" id="location"  value={location} onChange={(e) => setLocation(e.target.value)} className="bg-[#fff] border w-full pl-12 py-2 pr-2 rounded h-full" />
-          </div>
-          {/* <input type="date" value={checkInDate} min={date}  className="bg-[#fff] hidden lg:block cursor-pointer w-[20%] py-2 px-4 border rounded h-full" onChange={(e)=> setCheckInDate(e.target.value)} name="checkindate" id="" />
-          <input type="date" name="checkoutdate" min={date}  className="bg-[#fff] hidden lg:block cursor-pointer w-[20%] py-2 px-4 border rounded h-full" value={checkOutDate} onChange={(e)=> setCheckOutDate(e.target.value)} id="" /> */}
-          <input type="submit" value="Search" className="bg-primary-blue cursor-pointer rounded px-6 py-2 text-white" onClick={(e)=> handleSubmit(e)} />
-        </form>
+        </div>
       </div>
 
       <div className="flex w-full flex-col overflow-y-scroll max-h-full scroll-m-2">
        {destinations !== null ? (
-  <div className="flex flex-col gap-2">
-    {/* Render destinations */}
+      <div className="flex flex-col gap-2">
+       {/* Render destinations */}
         {destinations.map(({ country, image_url, hotels, dest_id, region, name }) => (
           <div key={dest_id} className="w-full flex gap-2 max-h-[274px] rounded text-[#676E7E] bg-white p-2">
             <div className="relative text-[#676E7E]">
@@ -97,6 +88,8 @@ export default function Home() {
     ) : null}
 
       </div>
+
+      <div></div>
     </main>
   );
 }
