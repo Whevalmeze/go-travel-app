@@ -31,7 +31,7 @@ export default function Activity({id, name="The Museum of Modern Art", cityName,
                         </div>
                     </div>
                 <div className='flex justify-between text-[#647995] w-full border-t border-b border-t-[#E4E7EC] border-b-[#E4E7EC] p-2'>
-                    <div className='flex gap-3'>What's included:
+                    <div className='flex gap-3'>What&apos;s included:
                     <div className='items-start flex justify-center gap-1'>
                         Admission to the Empire State Building
                     </div>
