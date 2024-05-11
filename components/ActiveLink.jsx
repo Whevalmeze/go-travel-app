@@ -9,7 +9,7 @@ const ActiveLink = ({ href, children }) => {
   const isActive = pathname === href;
 
   // Define the styling for active and inactive links
-  const linkStyle = isActive ? "text-white" : "text-[#647995]" ;
+  const linkStyle = isActive ? "underline" : "" ;
 
   return (
     <Link className={linkStyle} href={href}>
