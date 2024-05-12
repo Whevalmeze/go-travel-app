@@ -6,7 +6,7 @@ const HomePageForm = ({page, checkInDate, checkOutDate, date, location, setLocat
         setSearchQuery(location)
       }
   return (
-    <form className="flex absolute bottom-[-60px] bg-amber-500 p-1 text-black min-w-full rounded-md gap-1">
+    <form className="flex justify-between absolute bottom-[-60px] bg-amber-500 p-1 text-black min-w-full rounded-md gap-1">
         <div className="relative w-full md:w-[40%] min-w-[200px]">
             <Image src={`${page.toLowerCase() == "destination" ? "/Buildings.svg" : "/search-icon.svg" }`} className="absolute left-4 top-[25%]" width={20} height={20} alt="" />
             <input type="search" maxLength={20} minLength={2} placeholder={`Search for a ${page}`} name="location" id="location"  value={location} onChange={(e) => setLocation(e.target.value)} className="bg-[#fff] border w-full pl-12 py-2 pr-2 rounded h-full" />
