@@ -11,8 +11,8 @@ export const DefaultNav = () => {
                 <ActiveLink href='/'><li className="hidden sm:block">Home</li></ActiveLink>
                 <ActiveLink href='/hotels'><li className="hidden sm:block">Hotels</li></ActiveLink>
                 <ActiveLink href='/flights'><li className="hidden sm:block">Flights</li></ActiveLink>
-                <ActiveLink href='/'><li className="hidden sm:block">Packages</li></ActiveLink>
-                <ActiveLink href='/'><li>Sign In</li></ActiveLink>
+                <ActiveLink href=''><li className="hidden sm:block">Packages</li></ActiveLink>
+                <ActiveLink href=''><li>Sign In</li></ActiveLink>
             </ul>
         </div>
     </div>
