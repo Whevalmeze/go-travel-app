@@ -1,5 +1,6 @@
 import { useRef } from "react"
 import PropertyCard from "./PropertyCard"
+import Image from "next/image"
 
 const Property = () => {
     const scrollRef = useRef(null)
@@ -40,7 +41,9 @@ const Property = () => {
                             )
                     )}
                 </div>
-                <div onClick={(e) => scroll(e)} ref={scrollRef} className='absolute cursor-pointer top-[40%] right-[5px] rounded-full bg-white p-4 w-4 h-4'></div>
+                <div onClick={(e) => scroll(e)} ref={scrollRef} className='absolute cursor-pointer top-[40%] right-[5px] rounded-full bg-white p-1'>
+                    <Image src="/arrowright.svg" width={18} height={18} alt="" />
+                </div>
             </div>
         </div>
     </section>
