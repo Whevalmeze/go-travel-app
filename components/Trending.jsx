@@ -4,27 +4,27 @@ const Trending = () => {
      const places = [
         {
             place: "Lagos",
-            flag: "",
+            flag: () => <span>&#127475;&#127468;</span>,
             imgUrl: "/places/lagos.jpg"
         },
         {
             place: "London",
-            flag: "",
+            flag: () => <span>&#127468;&#127463;</span>,
             imgUrl: "/places/london.jpg"
         },
         {
             place: "Abuja",
-            flag: "",
+            flag: () => <span>&#127475;&#127468;</span>,
             imgUrl: "/places/abuja.jpg"
         },
         {
             place: "Ikeja",
-            flag: "",
+            flag: () => <span>&#127475;&#127468;</span>,
             imgUrl: "/places/ikeja.jpg"
         },
         {
             place: "Paris",
-            flag: "",
+            flag: () => <span>&#127467;&#127479;</span>,
             imgUrl: "/places/paris.jpg"
         },
     ]
