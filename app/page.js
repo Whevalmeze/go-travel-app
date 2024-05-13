@@ -1,5 +1,6 @@
 "use client"
 import { DefaultNav } from "@/components/DefaultNav";
+import Footer from "@/components/Footer";
 import HomePageForm from "@/components/HomePageForm";
 import Property from "@/components/Proprety";
 import Trending from "@/components/Trending";
@@ -41,6 +42,7 @@ export default function Home() {
   }, [searchQuery]);
 
   return (
+    <>
     <main className="w-full">
       <div className="w-full p-4 bg-[#003b95]">
         <div className="flex flex-col m-auto text-white max-w-screen-xl items-center tracking-tighter p-3 w-full rounded-md">
@@ -93,5 +95,7 @@ export default function Home() {
       <Trending />
       <Property />
     </main>
+    <Footer />
+    </>
   );
 }

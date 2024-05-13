@@ -1,3 +1,4 @@
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
 import ActiveLink from "./ActiveLink"
 
 export const DefaultNav = () => {
@@ -12,7 +13,12 @@ export const DefaultNav = () => {
                 <ActiveLink href='/hotels'><li className="hidden sm:block">Hotels</li></ActiveLink>
                 <ActiveLink href='/flights'><li className="hidden sm:block">Flights</li></ActiveLink>
                 <ActiveLink href=''><li className="hidden sm:block">Packages</li></ActiveLink>
-                <ActiveLink href=''><li>Sign In</li></ActiveLink>
+                <SignedOut>
+                  <SignInButton />
+                </SignedOut>
+                <SignedIn>
+                  <UserButton />
+                </SignedIn>
             </ul>
         </div>
     </div>
