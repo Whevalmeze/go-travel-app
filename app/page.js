@@ -88,7 +88,7 @@ export default function Home() {
         ))}
       </div>
     ) : location !== "" ? (
-      <p className="m-auto">Your search is loading, please wait ...</p>
+      <p className="m-auto">Your search is loading, please wait ..</p>
     ) : null}
 
       </div>
